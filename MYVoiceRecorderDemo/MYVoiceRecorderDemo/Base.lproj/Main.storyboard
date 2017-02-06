@@ -25,7 +25,7 @@
                                 <rect key="frame" x="125.5" y="318" width="123" height="30"/>
                                 <state key="normal" title="点击弹出录音控件"/>
                                 <connections>
-                                    <segue destination="Bak-rE-82P" kind="presentation" id="nej-A5-kqE"/>
+                                    <segue destination="Bak-rE-82P" kind="presentation" identifier="segueViewToRecorderView" id="nej-A5-kqE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,25 +39,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Recorder View Controller-->
         <scene sceneID="5YL-aV-vaE">
             <objects>
-                <viewController id="Bak-rE-82P" sceneMemberID="viewController">
+                <viewController id="Bak-rE-82P" customClass="RecorderViewController" customModule="MYVoiceRecorderDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YFY-3m-Rya"/>
                         <viewControllerLayoutGuide type="bottom" id="zrZ-P2-8FY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iBF-r4-Sfd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcH-0r-fmm">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ds2-81-Ysz"/>
+                                </constraints>
+                                <state key="normal" title="按住说话">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dragOutSide:" destination="Bak-rE-82P" eventType="touchDragOutside" id="n0z-jJ-Tbl"/>
+                                    <action selector="touchDown:" destination="Bak-rE-82P" eventType="touchDown" id="bhX-cY-iuT"/>
+                                    <action selector="touchUpInside:" destination="Bak-rE-82P" eventType="touchUpInside" id="SRj-Zr-0fY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.49019607840000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FcH-0r-fmm" firstAttribute="leading" secondItem="iBF-r4-Sfd" secondAttribute="leading" id="G22-DJ-7dx"/>
+                            <constraint firstAttribute="trailing" secondItem="FcH-0r-fmm" secondAttribute="trailing" id="Wwi-bF-INh"/>
+                            <constraint firstItem="zrZ-P2-8FY" firstAttribute="top" secondItem="FcH-0r-fmm" secondAttribute="bottom" id="oQH-BJ-b9e"/>
+                        </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzf-uz-XTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="36"/>
+            <point key="canvasLocation" x="849" y="119"/>
         </scene>
     </scenes>
 </document>

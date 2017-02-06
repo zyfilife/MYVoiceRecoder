@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4045D4B91E484518007FA18E /* SlideInPrensentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B61E484518007FA18E /* SlideInPrensentationDelegate.swift */; };
+		4045D4BA1E484518007FA18E /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B71E484518007FA18E /* SlideInPresentationController.swift */; };
+		4045D4BB1E484518007FA18E /* SliderPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B81E484518007FA18E /* SliderPresentationAnimator.swift */; };
+		4045D4BE1E484823007FA18E /* MYRecorderHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4BD1E484823007FA18E /* MYRecorderHUD.swift */; };
+		4045D4C21E484938007FA18E /* MYRecorderHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4045D4C11E484938007FA18E /* MYRecorderHUD.xib */; };
+		4045D4C41E484D80007FA18E /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4C31E484D80007FA18E /* RecorderViewController.swift */; };
 		4061D6CE1E45864700F3482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6CD1E45864700F3482B /* AppDelegate.swift */; };
 		4061D6D01E45864700F3482B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6CF1E45864700F3482B /* ViewController.swift */; };
 		4061D6D31E45864700F3482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6D11E45864700F3482B /* Main.storyboard */; };
@@ -35,6 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4045D4B61E484518007FA18E /* SlideInPrensentationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPrensentationDelegate.swift; sourceTree = "<group>"; };
+		4045D4B71E484518007FA18E /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		4045D4B81E484518007FA18E /* SliderPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderPresentationAnimator.swift; sourceTree = "<group>"; };
+		4045D4BD1E484823007FA18E /* MYRecorderHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MYRecorderHUD.swift; sourceTree = "<group>"; };
+		4045D4C11E484938007FA18E /* MYRecorderHUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MYRecorderHUD.xib; sourceTree = "<group>"; };
+		4045D4C31E484D80007FA18E /* RecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		4061D6CA1E45864700F3482B /* MYVoiceRecorderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYVoiceRecorderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4061D6CD1E45864700F3482B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4061D6CF1E45864700F3482B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +107,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4045D4B51E484518007FA18E /* MFPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				4045D4B61E484518007FA18E /* SlideInPrensentationDelegate.swift */,
+				4045D4B71E484518007FA18E /* SlideInPresentationController.swift */,
+				4045D4B81E484518007FA18E /* SliderPresentationAnimator.swift */,
+			);
+			path = MFPresentation;
+			sourceTree = "<group>";
+		};
+		4045D4BC1E484813007FA18E /* MYRecorderHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4045D4BD1E484823007FA18E /* MYRecorderHUD.swift */,
+				4045D4C11E484938007FA18E /* MYRecorderHUD.xib */,
+			);
+			path = MYRecorderHUD;
+			sourceTree = "<group>";
+		};
 		4061D6C11E45864700F3482B = {
 			isa = PBXGroup;
 			children = (
@@ -117,10 +148,13 @@
 				4061D7171E4588F600F3482B /* MYVoiceRecorderDemo-BridgeHeader.h */,
 				4061D6CD1E45864700F3482B /* AppDelegate.swift */,
 				4061D6CF1E45864700F3482B /* ViewController.swift */,
+				4045D4C31E484D80007FA18E /* RecorderViewController.swift */,
 				4061D6D11E45864700F3482B /* Main.storyboard */,
 				4061D6D41E45864700F3482B /* Assets.xcassets */,
 				4061D6D61E45864700F3482B /* LaunchScreen.storyboard */,
 				4061D6D91E45864700F3482B /* Info.plist */,
+				4045D4BC1E484813007FA18E /* MYRecorderHUD */,
+				4045D4B51E484518007FA18E /* MFPresentation */,
 				4061D6E21E45885B00F3482B /* TSVoiceConverter-0.1.3 */,
 				4061D6DF1E45866500F3482B /* MYVoiceRecorder */,
 			);
@@ -276,6 +310,7 @@
 				4061D7121E45885B00F3482B /* opencore-amrnb.pc in Resources */,
 				4061D7131E45885B00F3482B /* opencore-amrwb.pc in Resources */,
 				4061D6D31E45864700F3482B /* Main.storyboard in Resources */,
+				4045D4C21E484938007FA18E /* MYRecorderHUD.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,9 +324,14 @@
 				4061D7031E45885B00F3482B /* wav.mm in Sources */,
 				4061D6E11E45867700F3482B /* MYVoiceRecorder.swift in Sources */,
 				4061D7021E45885B00F3482B /* amrFileCodec.mm in Sources */,
+				4045D4B91E484518007FA18E /* SlideInPrensentationDelegate.swift in Sources */,
+				4045D4C41E484D80007FA18E /* RecorderViewController.swift in Sources */,
 				4061D6D01E45864700F3482B /* ViewController.swift in Sources */,
 				4061D7141E45885B00F3482B /* TSVoiceConverter.swift in Sources */,
+				4045D4BA1E484518007FA18E /* SlideInPresentationController.swift in Sources */,
 				4061D6CE1E45864700F3482B /* AppDelegate.swift in Sources */,
+				4045D4BB1E484518007FA18E /* SliderPresentationAnimator.swift in Sources */,
+				4045D4BE1E484823007FA18E /* MYRecorderHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +505,7 @@
 				4061D6DE1E45864700F3482B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

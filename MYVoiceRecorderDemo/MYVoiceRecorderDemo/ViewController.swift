@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var direction = PrensentaionDirection.bottom
+    
+    let slideInPrensentationDelegate = SlideInPrensentationDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +24,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueViewToRecorderView" {
+            let viewController = segue.destination
+            self.slideInPrensentationDelegate.direction = self.direction
+            self.slideInPrensentationDelegate.customHeight = 50
+            self.slideInPrensentationDelegate.disableCompactHeight = true
+            viewController.transitioningDelegate = self.slideInPrensentationDelegate
+            viewController.modalPresentationStyle = .custom
+        }
+    }
 }
 
