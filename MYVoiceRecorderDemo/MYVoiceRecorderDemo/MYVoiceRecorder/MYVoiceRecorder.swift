@@ -20,9 +20,7 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
     
     static let shareInstance = MYVoiceRecorder()
     
-    fileprivate var recorderPath: String {
-        return NSTemporaryDirectory() + "MYVoiceRecorder.wav"
-    }
+    fileprivate var recorderPath: String!
     
     fileprivate lazy var session: AVAudioSession = {
         let session = AVAudioSession.sharedInstance()
@@ -61,12 +59,13 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
         }
     }
     
-    fileprivate var isCancelRecording = false
-    
     weak var delegate: MYVoiceRecorderDelegate?
     
     override init() {
         super.init()
+        
+        self.recorderPath = NSTemporaryDirectory() + "MYVoiceRecorder.wav"
+        
         if let url = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first {
             let recorderURL = url.appendingPathComponent("MYRecorder")
             
@@ -87,11 +86,8 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
         }
         
         if recorder.isRecording {
-            self.isCancelRecording = true
             recorder.stop()
         }
-        
-        self.isCancelRecording = false
         
         recorder.prepareToRecord()
         
@@ -109,8 +105,6 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
     
     func stopRecording() {
         
-        self.isCancelRecording = false
-        
         guard let recorder = self.recorder else {
             return
         }
@@ -121,8 +115,6 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
     }
     
     func cancelRecording() {
-        
-        self.isCancelRecording = true
         
         guard let recorder = self.recorder else {
             return
@@ -173,7 +165,7 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
     
     fileprivate func startDisplayLink() {
         self.displayLink = CADisplayLink(target: self, selector: #selector(MYVoiceRecorder.monitorVolume))
-        self.displayLink?.add(to: RunLoop.main, forMode: RunLoopMode.defaultRunLoopMode)
+        self.displayLink?.add(to: RunLoop.main, forMode: RunLoopMode.commonModes)
     }
     
     fileprivate func stopDisplayLink() {
@@ -186,42 +178,43 @@ class MYVoiceRecorder: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate 
         self.delegate?.didStartRecoring?(my_voiceRecorder: self, volume: 10*peakPower,currentTime: self.recorder!.currentTime)
     }
     
+    func finishedRecording() {
+        
+        self.stopRecording()
+        
+        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first!
+        
+        let url = URL(fileURLWithPath: path)
+        let recorderURL = url.appendingPathComponent("MYRecorder")
+        
+        let timeStamp = Date.timeIntervalSinceReferenceDate
+        
+        let fileName = "Demo\(Int(timeStamp)).amr"
+        
+        let destURLOfAMR = recorderURL.appendingPathComponent(fileName)
+        
+        let fileNameOfWAV = fileName.replacingOccurrences(of: "amr", with: "wav")
+        
+        let destURLOfWav = recorderURL.appendingPathComponent(fileNameOfWAV)
+        DispatchQueue.global().async {
+            let flag = TSVoiceConverter.convertWavToAmr(self.recorderPath, amrSavePath: destURLOfAMR.path)
+            print("格式转换：\(flag)")
+        }
+        do {
+            try FileManager.default.copyItem(at: self.recorder!.url, to: destURLOfWav)
+            self.delegate?.didFinishRecording?(my_voiceRecorder: self, wavURL: destURLOfWav, amrURL: destURLOfAMR)
+        }catch {
+            print("copyItem: \(error)")
+        }
+        
+    }
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             do {
                 try self.session.setActive(false)
             }catch {
                 print(error)
-            }
-            
-            if isCancelRecording {
-                return
-            }
-            
-            if let url = FileManager.default.urls(for: FileManager.SearchPathDirectory.cachesDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first {
-                let recorderURL = url.appendingPathComponent("MYRecorder")
-                
-                let timeStamp = Date.timeIntervalSinceReferenceDate
-                
-                let fileName = "Demo\(Int(timeStamp)).amr"
-                
-                let destURLOfAMR = recorderURL.appendingPathComponent(fileName)
-                
-                let fileNameOfWAV = fileName.replacingOccurrences(of: "amr", with: "wav")
-                
-                let destURLOfWav = recorderURL.appendingPathComponent(fileNameOfWAV)
-                
-                let flag = TSVoiceConverter.convertWavToAmr(self.recorderPath, amrSavePath: destURLOfAMR.path)
-                
-                print("格式转换：\(flag)")
-                
-                do {
-                    try FileManager.default.copyItem(at: recorder.url, to: destURLOfWav)
-                    try FileManager.default.removeItem(at: recorder.url)
-                    self.delegate?.didFinishRecording?(my_voiceRecorder: self, wavURL: destURLOfWav, amrURL: destURLOfAMR)
-                }catch {
-                    print("copyItem: \(error)")
-                }
             }
         }
     }

@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402447861E4BFDE400ABDFAC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402447851E4BFDE400ABDFAC /* CollectionViewCell.swift */; };
+		402447A71E4C11AB00ABDFAC /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4024478A1E4C11AB00ABDFAC /* amrFileCodec.mm */; };
+		402447A81E4C11AB00ABDFAC /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4024478C1E4C11AB00ABDFAC /* wav.mm */; };
+		402447A91E4C11AB00ABDFAC /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4024478E1E4C11AB00ABDFAC /* libopencore-amrnb.a */; };
+		402447AA1E4C11AB00ABDFAC /* libopencore-amrnb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4024478F1E4C11AB00ABDFAC /* libopencore-amrnb.a.arm64 */; };
+		402447AB1E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447901E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7 */; };
+		402447AC1E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7s in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447911E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7s */; };
+		402447AD1E4C11AB00ABDFAC /* libopencore-amrnb.a.i386 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447921E4C11AB00ABDFAC /* libopencore-amrnb.a.i386 */; };
+		402447AE1E4C11AB00ABDFAC /* libopencore-amrnb.a.x86_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447931E4C11AB00ABDFAC /* libopencore-amrnb.a.x86_64 */; };
+		402447AF1E4C11AB00ABDFAC /* libopencore-amrnb.la in Resources */ = {isa = PBXBuildFile; fileRef = 402447941E4C11AB00ABDFAC /* libopencore-amrnb.la */; };
+		402447B01E4C11AB00ABDFAC /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447951E4C11AB00ABDFAC /* libopencore-amrwb.a */; };
+		402447B11E4C11AB00ABDFAC /* libopencore-amrwb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447961E4C11AB00ABDFAC /* libopencore-amrwb.a.arm64 */; };
+		402447B21E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447971E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7 */; };
+		402447B31E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7s in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447981E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7s */; };
+		402447B41E4C11AB00ABDFAC /* libopencore-amrwb.a.i386 in Frameworks */ = {isa = PBXBuildFile; fileRef = 402447991E4C11AB00ABDFAC /* libopencore-amrwb.a.i386 */; };
+		402447B51E4C11AB00ABDFAC /* libopencore-amrwb.a.x86_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4024479A1E4C11AB00ABDFAC /* libopencore-amrwb.a.x86_64 */; };
+		402447B61E4C11AB00ABDFAC /* libopencore-amrwb.la in Resources */ = {isa = PBXBuildFile; fileRef = 4024479B1E4C11AB00ABDFAC /* libopencore-amrwb.la */; };
+		402447B71E4C11AB00ABDFAC /* opencore-amrnb.pc in Resources */ = {isa = PBXBuildFile; fileRef = 4024479D1E4C11AB00ABDFAC /* opencore-amrnb.pc */; };
+		402447B81E4C11AB00ABDFAC /* opencore-amrwb.pc in Resources */ = {isa = PBXBuildFile; fileRef = 4024479E1E4C11AB00ABDFAC /* opencore-amrwb.pc */; };
+		402447B91E4C11AB00ABDFAC /* TSVoiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402447A51E4C11AB00ABDFAC /* TSVoiceConverter.swift */; };
 		4045D4B91E484518007FA18E /* SlideInPrensentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B61E484518007FA18E /* SlideInPrensentationDelegate.swift */; };
 		4045D4BA1E484518007FA18E /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B71E484518007FA18E /* SlideInPresentationController.swift */; };
 		4045D4BB1E484518007FA18E /* SliderPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4B81E484518007FA18E /* SliderPresentationAnimator.swift */; };
@@ -14,33 +34,40 @@
 		4045D4C21E484938007FA18E /* MYRecorderHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4045D4C11E484938007FA18E /* MYRecorderHUD.xib */; };
 		4045D4C41E484D80007FA18E /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045D4C31E484D80007FA18E /* RecorderViewController.swift */; };
 		4061D6CE1E45864700F3482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6CD1E45864700F3482B /* AppDelegate.swift */; };
-		4061D6D01E45864700F3482B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6CF1E45864700F3482B /* ViewController.swift */; };
 		4061D6D31E45864700F3482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6D11E45864700F3482B /* Main.storyboard */; };
 		4061D6D51E45864700F3482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6D41E45864700F3482B /* Assets.xcassets */; };
 		4061D6D81E45864700F3482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6D61E45864700F3482B /* LaunchScreen.storyboard */; };
 		4061D6E11E45867700F3482B /* MYVoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6E01E45867700F3482B /* MYVoiceRecorder.swift */; };
-		4061D7021E45885B00F3482B /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6E51E45885B00F3482B /* amrFileCodec.mm */; };
-		4061D7031E45885B00F3482B /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4061D6E71E45885B00F3482B /* wav.mm */; };
-		4061D7041E45885B00F3482B /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6E91E45885B00F3482B /* libopencore-amrnb.a */; };
-		4061D7051E45885B00F3482B /* libopencore-amrnb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6EA1E45885B00F3482B /* libopencore-amrnb.a.arm64 */; };
-		4061D7061E45885B00F3482B /* libopencore-amrnb.a.armv7 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6EB1E45885B00F3482B /* libopencore-amrnb.a.armv7 */; };
-		4061D7071E45885B00F3482B /* libopencore-amrnb.a.armv7s in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6EC1E45885B00F3482B /* libopencore-amrnb.a.armv7s */; };
-		4061D7081E45885B00F3482B /* libopencore-amrnb.a.i386 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6ED1E45885B00F3482B /* libopencore-amrnb.a.i386 */; };
-		4061D7091E45885B00F3482B /* libopencore-amrnb.a.x86_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6EE1E45885B00F3482B /* libopencore-amrnb.a.x86_64 */; };
-		4061D70A1E45885B00F3482B /* libopencore-amrnb.la in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6EF1E45885B00F3482B /* libopencore-amrnb.la */; };
-		4061D70B1E45885B00F3482B /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F01E45885B00F3482B /* libopencore-amrwb.a */; };
-		4061D70C1E45885B00F3482B /* libopencore-amrwb.a.arm64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F11E45885B00F3482B /* libopencore-amrwb.a.arm64 */; };
-		4061D70D1E45885B00F3482B /* libopencore-amrwb.a.armv7 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F21E45885B00F3482B /* libopencore-amrwb.a.armv7 */; };
-		4061D70E1E45885B00F3482B /* libopencore-amrwb.a.armv7s in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F31E45885B00F3482B /* libopencore-amrwb.a.armv7s */; };
-		4061D70F1E45885B00F3482B /* libopencore-amrwb.a.i386 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F41E45885B00F3482B /* libopencore-amrwb.a.i386 */; };
-		4061D7101E45885B00F3482B /* libopencore-amrwb.a.x86_64 in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061D6F51E45885B00F3482B /* libopencore-amrwb.a.x86_64 */; };
-		4061D7111E45885B00F3482B /* libopencore-amrwb.la in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6F61E45885B00F3482B /* libopencore-amrwb.la */; };
-		4061D7121E45885B00F3482B /* opencore-amrnb.pc in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6F81E45885B00F3482B /* opencore-amrnb.pc */; };
-		4061D7131E45885B00F3482B /* opencore-amrwb.pc in Resources */ = {isa = PBXBuildFile; fileRef = 4061D6F91E45885B00F3482B /* opencore-amrwb.pc */; };
-		4061D7141E45885B00F3482B /* TSVoiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061D7001E45885B00F3482B /* TSVoiceConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402447851E4BFDE400ABDFAC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		402447891E4C11AB00ABDFAC /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		4024478A1E4C11AB00ABDFAC /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		4024478B1E4C11AB00ABDFAC /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		4024478C1E4C11AB00ABDFAC /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		4024478E1E4C11AB00ABDFAC /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		4024478F1E4C11AB00ABDFAC /* libopencore-amrnb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.arm64"; sourceTree = "<group>"; };
+		402447901E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7"; sourceTree = "<group>"; };
+		402447911E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7s"; sourceTree = "<group>"; };
+		402447921E4C11AB00ABDFAC /* libopencore-amrnb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.i386"; sourceTree = "<group>"; };
+		402447931E4C11AB00ABDFAC /* libopencore-amrnb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.x86_64"; sourceTree = "<group>"; };
+		402447941E4C11AB00ABDFAC /* libopencore-amrnb.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libopencore-amrnb.la"; sourceTree = "<group>"; };
+		402447951E4C11AB00ABDFAC /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		402447961E4C11AB00ABDFAC /* libopencore-amrwb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.arm64"; sourceTree = "<group>"; };
+		402447971E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7"; sourceTree = "<group>"; };
+		402447981E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7s"; sourceTree = "<group>"; };
+		402447991E4C11AB00ABDFAC /* libopencore-amrwb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.i386"; sourceTree = "<group>"; };
+		4024479A1E4C11AB00ABDFAC /* libopencore-amrwb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.x86_64"; sourceTree = "<group>"; };
+		4024479B1E4C11AB00ABDFAC /* libopencore-amrwb.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libopencore-amrwb.la"; sourceTree = "<group>"; };
+		4024479D1E4C11AB00ABDFAC /* opencore-amrnb.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "opencore-amrnb.pc"; sourceTree = "<group>"; };
+		4024479E1E4C11AB00ABDFAC /* opencore-amrwb.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "opencore-amrwb.pc"; sourceTree = "<group>"; };
+		402447A01E4C11AB00ABDFAC /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		402447A11E4C11AB00ABDFAC /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		402447A31E4C11AB00ABDFAC /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		402447A41E4C11AB00ABDFAC /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		402447A51E4C11AB00ABDFAC /* TSVoiceConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSVoiceConverter.swift; sourceTree = "<group>"; };
+		402447A61E4C11AB00ABDFAC /* VoiceConverterHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceConverterHeaders.h; sourceTree = "<group>"; };
 		4045D4B61E484518007FA18E /* SlideInPrensentationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPrensentationDelegate.swift; sourceTree = "<group>"; };
 		4045D4B71E484518007FA18E /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		4045D4B81E484518007FA18E /* SliderPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderPresentationAnimator.swift; sourceTree = "<group>"; };
@@ -49,38 +76,11 @@
 		4045D4C31E484D80007FA18E /* RecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		4061D6CA1E45864700F3482B /* MYVoiceRecorderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYVoiceRecorderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4061D6CD1E45864700F3482B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4061D6CF1E45864700F3482B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4061D6D21E45864700F3482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4061D6D41E45864700F3482B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4061D6D71E45864700F3482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4061D6D91E45864700F3482B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4061D6E01E45867700F3482B /* MYVoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MYVoiceRecorder.swift; sourceTree = "<group>"; };
-		4061D6E41E45885B00F3482B /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		4061D6E51E45885B00F3482B /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
-		4061D6E61E45885B00F3482B /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
-		4061D6E71E45885B00F3482B /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
-		4061D6E91E45885B00F3482B /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		4061D6EA1E45885B00F3482B /* libopencore-amrnb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.arm64"; sourceTree = "<group>"; };
-		4061D6EB1E45885B00F3482B /* libopencore-amrnb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7"; sourceTree = "<group>"; };
-		4061D6EC1E45885B00F3482B /* libopencore-amrnb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7s"; sourceTree = "<group>"; };
-		4061D6ED1E45885B00F3482B /* libopencore-amrnb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.i386"; sourceTree = "<group>"; };
-		4061D6EE1E45885B00F3482B /* libopencore-amrnb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.x86_64"; sourceTree = "<group>"; };
-		4061D6EF1E45885B00F3482B /* libopencore-amrnb.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libopencore-amrnb.la"; sourceTree = "<group>"; };
-		4061D6F01E45885B00F3482B /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		4061D6F11E45885B00F3482B /* libopencore-amrwb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.arm64"; sourceTree = "<group>"; };
-		4061D6F21E45885B00F3482B /* libopencore-amrwb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7"; sourceTree = "<group>"; };
-		4061D6F31E45885B00F3482B /* libopencore-amrwb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7s"; sourceTree = "<group>"; };
-		4061D6F41E45885B00F3482B /* libopencore-amrwb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.i386"; sourceTree = "<group>"; };
-		4061D6F51E45885B00F3482B /* libopencore-amrwb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.x86_64"; sourceTree = "<group>"; };
-		4061D6F61E45885B00F3482B /* libopencore-amrwb.la */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "libopencore-amrwb.la"; sourceTree = "<group>"; };
-		4061D6F81E45885B00F3482B /* opencore-amrnb.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "opencore-amrnb.pc"; sourceTree = "<group>"; };
-		4061D6F91E45885B00F3482B /* opencore-amrwb.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "opencore-amrwb.pc"; sourceTree = "<group>"; };
-		4061D6FB1E45885B00F3482B /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		4061D6FC1E45885B00F3482B /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		4061D6FE1E45885B00F3482B /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		4061D6FF1E45885B00F3482B /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		4061D7001E45885B00F3482B /* TSVoiceConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSVoiceConverter.swift; sourceTree = "<group>"; };
-		4061D7011E45885B00F3482B /* TSVoiceConverterHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVoiceConverterHeaders.h; sourceTree = "<group>"; };
 		4061D7171E4588F600F3482B /* MYVoiceRecorderDemo-BridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYVoiceRecorderDemo-BridgeHeader.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,24 +89,97 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4061D70C1E45885B00F3482B /* libopencore-amrwb.a.arm64 in Frameworks */,
-				4061D7081E45885B00F3482B /* libopencore-amrnb.a.i386 in Frameworks */,
-				4061D7041E45885B00F3482B /* libopencore-amrnb.a in Frameworks */,
-				4061D70F1E45885B00F3482B /* libopencore-amrwb.a.i386 in Frameworks */,
-				4061D7051E45885B00F3482B /* libopencore-amrnb.a.arm64 in Frameworks */,
-				4061D7091E45885B00F3482B /* libopencore-amrnb.a.x86_64 in Frameworks */,
-				4061D70E1E45885B00F3482B /* libopencore-amrwb.a.armv7s in Frameworks */,
-				4061D7071E45885B00F3482B /* libopencore-amrnb.a.armv7s in Frameworks */,
-				4061D70B1E45885B00F3482B /* libopencore-amrwb.a in Frameworks */,
-				4061D7061E45885B00F3482B /* libopencore-amrnb.a.armv7 in Frameworks */,
-				4061D7101E45885B00F3482B /* libopencore-amrwb.a.x86_64 in Frameworks */,
-				4061D70D1E45885B00F3482B /* libopencore-amrwb.a.armv7 in Frameworks */,
+				402447AD1E4C11AB00ABDFAC /* libopencore-amrnb.a.i386 in Frameworks */,
+				402447B21E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7 in Frameworks */,
+				402447AB1E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7 in Frameworks */,
+				402447B01E4C11AB00ABDFAC /* libopencore-amrwb.a in Frameworks */,
+				402447B31E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7s in Frameworks */,
+				402447AC1E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7s in Frameworks */,
+				402447AA1E4C11AB00ABDFAC /* libopencore-amrnb.a.arm64 in Frameworks */,
+				402447B11E4C11AB00ABDFAC /* libopencore-amrwb.a.arm64 in Frameworks */,
+				402447A91E4C11AB00ABDFAC /* libopencore-amrnb.a in Frameworks */,
+				402447AE1E4C11AB00ABDFAC /* libopencore-amrnb.a.x86_64 in Frameworks */,
+				402447B41E4C11AB00ABDFAC /* libopencore-amrwb.a.i386 in Frameworks */,
+				402447B51E4C11AB00ABDFAC /* libopencore-amrwb.a.x86_64 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402447871E4C11AB00ABDFAC /* VoiceConverter */ = {
+			isa = PBXGroup;
+			children = (
+				402447881E4C11AB00ABDFAC /* amrwapper */,
+				4024478D1E4C11AB00ABDFAC /* lib */,
+				4024479F1E4C11AB00ABDFAC /* opencore-amrnb */,
+				402447A21E4C11AB00ABDFAC /* opencore-amrwb */,
+				402447A51E4C11AB00ABDFAC /* TSVoiceConverter.swift */,
+				402447A61E4C11AB00ABDFAC /* VoiceConverterHeaders.h */,
+			);
+			path = VoiceConverter;
+			sourceTree = "<group>";
+		};
+		402447881E4C11AB00ABDFAC /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				402447891E4C11AB00ABDFAC /* amrFileCodec.h */,
+				4024478A1E4C11AB00ABDFAC /* amrFileCodec.mm */,
+				4024478B1E4C11AB00ABDFAC /* wav.h */,
+				4024478C1E4C11AB00ABDFAC /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		4024478D1E4C11AB00ABDFAC /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4024478E1E4C11AB00ABDFAC /* libopencore-amrnb.a */,
+				4024478F1E4C11AB00ABDFAC /* libopencore-amrnb.a.arm64 */,
+				402447901E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7 */,
+				402447911E4C11AB00ABDFAC /* libopencore-amrnb.a.armv7s */,
+				402447921E4C11AB00ABDFAC /* libopencore-amrnb.a.i386 */,
+				402447931E4C11AB00ABDFAC /* libopencore-amrnb.a.x86_64 */,
+				402447941E4C11AB00ABDFAC /* libopencore-amrnb.la */,
+				402447951E4C11AB00ABDFAC /* libopencore-amrwb.a */,
+				402447961E4C11AB00ABDFAC /* libopencore-amrwb.a.arm64 */,
+				402447971E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7 */,
+				402447981E4C11AB00ABDFAC /* libopencore-amrwb.a.armv7s */,
+				402447991E4C11AB00ABDFAC /* libopencore-amrwb.a.i386 */,
+				4024479A1E4C11AB00ABDFAC /* libopencore-amrwb.a.x86_64 */,
+				4024479B1E4C11AB00ABDFAC /* libopencore-amrwb.la */,
+				4024479C1E4C11AB00ABDFAC /* pkgconfig */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4024479C1E4C11AB00ABDFAC /* pkgconfig */ = {
+			isa = PBXGroup;
+			children = (
+				4024479D1E4C11AB00ABDFAC /* opencore-amrnb.pc */,
+				4024479E1E4C11AB00ABDFAC /* opencore-amrwb.pc */,
+			);
+			path = pkgconfig;
+			sourceTree = "<group>";
+		};
+		4024479F1E4C11AB00ABDFAC /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				402447A01E4C11AB00ABDFAC /* interf_dec.h */,
+				402447A11E4C11AB00ABDFAC /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		402447A21E4C11AB00ABDFAC /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				402447A31E4C11AB00ABDFAC /* dec_if.h */,
+				402447A41E4C11AB00ABDFAC /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
 		4045D4B51E484518007FA18E /* MFPresentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,15 +220,15 @@
 			children = (
 				4061D7171E4588F600F3482B /* MYVoiceRecorderDemo-BridgeHeader.h */,
 				4061D6CD1E45864700F3482B /* AppDelegate.swift */,
-				4061D6CF1E45864700F3482B /* ViewController.swift */,
 				4045D4C31E484D80007FA18E /* RecorderViewController.swift */,
+				402447851E4BFDE400ABDFAC /* CollectionViewCell.swift */,
 				4061D6D11E45864700F3482B /* Main.storyboard */,
 				4061D6D41E45864700F3482B /* Assets.xcassets */,
 				4061D6D61E45864700F3482B /* LaunchScreen.storyboard */,
 				4061D6D91E45864700F3482B /* Info.plist */,
+				402447871E4C11AB00ABDFAC /* VoiceConverter */,
 				4045D4BC1E484813007FA18E /* MYRecorderHUD */,
 				4045D4B51E484518007FA18E /* MFPresentation */,
-				4061D6E21E45885B00F3482B /* TSVoiceConverter-0.1.3 */,
 				4061D6DF1E45866500F3482B /* MYVoiceRecorder */,
 			);
 			path = MYVoiceRecorderDemo;
@@ -167,80 +240,6 @@
 				4061D6E01E45867700F3482B /* MYVoiceRecorder.swift */,
 			);
 			path = MYVoiceRecorder;
-			sourceTree = "<group>";
-		};
-		4061D6E21E45885B00F3482B /* TSVoiceConverter-0.1.3 */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6E31E45885B00F3482B /* amrwapper */,
-				4061D6E81E45885B00F3482B /* lib */,
-				4061D6FA1E45885B00F3482B /* opencore-amrnb */,
-				4061D6FD1E45885B00F3482B /* opencore-amrwb */,
-				4061D7001E45885B00F3482B /* TSVoiceConverter.swift */,
-				4061D7011E45885B00F3482B /* TSVoiceConverterHeaders.h */,
-			);
-			name = "TSVoiceConverter-0.1.3";
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		4061D6E31E45885B00F3482B /* amrwapper */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6E41E45885B00F3482B /* amrFileCodec.h */,
-				4061D6E51E45885B00F3482B /* amrFileCodec.mm */,
-				4061D6E61E45885B00F3482B /* wav.h */,
-				4061D6E71E45885B00F3482B /* wav.mm */,
-			);
-			path = amrwapper;
-			sourceTree = "<group>";
-		};
-		4061D6E81E45885B00F3482B /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6E91E45885B00F3482B /* libopencore-amrnb.a */,
-				4061D6EA1E45885B00F3482B /* libopencore-amrnb.a.arm64 */,
-				4061D6EB1E45885B00F3482B /* libopencore-amrnb.a.armv7 */,
-				4061D6EC1E45885B00F3482B /* libopencore-amrnb.a.armv7s */,
-				4061D6ED1E45885B00F3482B /* libopencore-amrnb.a.i386 */,
-				4061D6EE1E45885B00F3482B /* libopencore-amrnb.a.x86_64 */,
-				4061D6EF1E45885B00F3482B /* libopencore-amrnb.la */,
-				4061D6F01E45885B00F3482B /* libopencore-amrwb.a */,
-				4061D6F11E45885B00F3482B /* libopencore-amrwb.a.arm64 */,
-				4061D6F21E45885B00F3482B /* libopencore-amrwb.a.armv7 */,
-				4061D6F31E45885B00F3482B /* libopencore-amrwb.a.armv7s */,
-				4061D6F41E45885B00F3482B /* libopencore-amrwb.a.i386 */,
-				4061D6F51E45885B00F3482B /* libopencore-amrwb.a.x86_64 */,
-				4061D6F61E45885B00F3482B /* libopencore-amrwb.la */,
-				4061D6F71E45885B00F3482B /* pkgconfig */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		4061D6F71E45885B00F3482B /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6F81E45885B00F3482B /* opencore-amrnb.pc */,
-				4061D6F91E45885B00F3482B /* opencore-amrwb.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		4061D6FA1E45885B00F3482B /* opencore-amrnb */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6FB1E45885B00F3482B /* interf_dec.h */,
-				4061D6FC1E45885B00F3482B /* interf_enc.h */,
-			);
-			path = "opencore-amrnb";
-			sourceTree = "<group>";
-		};
-		4061D6FD1E45885B00F3482B /* opencore-amrwb */ = {
-			isa = PBXGroup;
-			children = (
-				4061D6FE1E45885B00F3482B /* dec_if.h */,
-				4061D6FF1E45885B00F3482B /* if_rom.h */,
-			);
-			path = "opencore-amrwb";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,12 +302,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4061D7111E45885B00F3482B /* libopencore-amrwb.la in Resources */,
 				4061D6D81E45864700F3482B /* LaunchScreen.storyboard in Resources */,
 				4061D6D51E45864700F3482B /* Assets.xcassets in Resources */,
-				4061D70A1E45885B00F3482B /* libopencore-amrnb.la in Resources */,
-				4061D7121E45885B00F3482B /* opencore-amrnb.pc in Resources */,
-				4061D7131E45885B00F3482B /* opencore-amrwb.pc in Resources */,
+				402447B61E4C11AB00ABDFAC /* libopencore-amrwb.la in Resources */,
+				402447B81E4C11AB00ABDFAC /* opencore-amrwb.pc in Resources */,
+				402447B71E4C11AB00ABDFAC /* opencore-amrnb.pc in Resources */,
+				402447AF1E4C11AB00ABDFAC /* libopencore-amrnb.la in Resources */,
 				4061D6D31E45864700F3482B /* Main.storyboard in Resources */,
 				4045D4C21E484938007FA18E /* MYRecorderHUD.xib in Resources */,
 			);
@@ -321,17 +320,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4061D7031E45885B00F3482B /* wav.mm in Sources */,
+				402447A81E4C11AB00ABDFAC /* wav.mm in Sources */,
 				4061D6E11E45867700F3482B /* MYVoiceRecorder.swift in Sources */,
-				4061D7021E45885B00F3482B /* amrFileCodec.mm in Sources */,
+				402447B91E4C11AB00ABDFAC /* TSVoiceConverter.swift in Sources */,
 				4045D4B91E484518007FA18E /* SlideInPrensentationDelegate.swift in Sources */,
 				4045D4C41E484D80007FA18E /* RecorderViewController.swift in Sources */,
-				4061D6D01E45864700F3482B /* ViewController.swift in Sources */,
-				4061D7141E45885B00F3482B /* TSVoiceConverter.swift in Sources */,
 				4045D4BA1E484518007FA18E /* SlideInPresentationController.swift in Sources */,
 				4061D6CE1E45864700F3482B /* AppDelegate.swift in Sources */,
 				4045D4BB1E484518007FA18E /* SliderPresentationAnimator.swift in Sources */,
+				402447A71E4C11AB00ABDFAC /* amrFileCodec.mm in Sources */,
 				4045D4BE1E484823007FA18E /* MYRecorderHUD.swift in Sources */,
+				402447861E4BFDE400ABDFAC /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +459,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MYVoiceRecorderDemo/Sources/lib",
+					"$(PROJECT_DIR)/MYVoiceRecorderDemo/VoiceConverter/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuyifeng.MYVoiceRecorderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,6 +478,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MYVoiceRecorderDemo/Sources/lib",
+					"$(PROJECT_DIR)/MYVoiceRecorderDemo/VoiceConverter/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuyifeng.MYVoiceRecorderDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

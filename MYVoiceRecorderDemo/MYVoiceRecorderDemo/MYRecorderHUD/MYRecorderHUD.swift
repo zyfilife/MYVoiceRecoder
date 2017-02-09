@@ -29,10 +29,21 @@ class MYRecorderHUD: UIView {
         }
     }
     
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var time: String? {
+        get {
+            return timeLabel.text
+        }
+        set {
+            self.timeLabel.text = newValue
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.image = UIImage(named: "Mic")
-        self.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 100, height: 100))
+        self.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 150, height: 150))
         self.center = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
     }
     
