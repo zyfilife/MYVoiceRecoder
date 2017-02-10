@@ -9,6 +9,7 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
@@ -21,8 +22,22 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     
-    var timer: Timer?
-    var i = 0
+    var timer: Timer? = nil {
+        willSet {
+            if self.timer != nil {
+                self.timer?.invalidate()
+                self.timer = nil
+            }
+        }
+    }
+    
+    var i = 0 {
+        didSet {
+            if self.i > 2 {
+                self.i = 0
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,15 +56,10 @@ class CollectionViewCell: UICollectionViewCell {
     
     func changeVoiceImageView() {
         self.imageView.image = UIImage(named: "语音\(self.i)")
-        
         self.i += 1
-        if self.i > 2 {
-            self.i = 0
-        }
     }
     
     func stopAnimation() {
-        self.timer?.invalidate()
         self.timer = nil
         self.i = 0
         self.imageView.image = UIImage(named: "语音2")

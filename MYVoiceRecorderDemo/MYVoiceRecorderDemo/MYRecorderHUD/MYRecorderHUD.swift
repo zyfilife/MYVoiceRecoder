@@ -45,6 +45,8 @@ class MYRecorderHUD: UIView {
         self.image = UIImage(named: "Mic")
         self.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 150, height: 150))
         self.center = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
+        self.alpha = 0.0
+        UIApplication.shared.keyWindow?.addSubview(self)
     }
     
     override init(frame: CGRect) {
@@ -63,12 +65,23 @@ class MYRecorderHUD: UIView {
     
     func show() {
         self.rate = 0.0
-        UIApplication.shared.keyWindow?.addSubview(self)
+        self.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseIn, .allowUserInteraction, .beginFromCurrentState], animations: {
+            self.transform = CGAffineTransform.identity
+            self.alpha = 1.0
+        }) { (finished) in
+            
+        }
     }
     
     func hide() {
         self.rate = 0.0
-        self.removeFromSuperview()
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.curveEaseOut, .allowUserInteraction, .beginFromCurrentState], animations: {
+            self.transform = CGAffineTransform(scaleX: 1/1.3, y: 1/1.3)
+            self.alpha = 0.0
+        }) { (finished) in
+            
+        }
     }
 
     

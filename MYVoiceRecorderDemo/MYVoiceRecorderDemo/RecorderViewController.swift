@@ -21,6 +21,8 @@ class RecorderViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var arrayOfVoiceURL = [VoiceModel]()
     
+    var selectedIndexPath: IndexPath?
+    
     lazy var layout: UICollectionViewFlowLayout = {
         
         let itemWidth: CGFloat = 84
@@ -43,7 +45,7 @@ class RecorderViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.recordButton.layer.cornerRadius = self.recordButton.frame.size.width/2
         self.recordButton.layer.masksToBounds = true
         
-        self.recordButton.layer.borderColor = UIColor.green.cgColor
+        self.recordButton.layer.borderColor = UIColor.gray.cgColor
         self.recordButton.layer.borderWidth = 1.5
     }
 
@@ -53,6 +55,10 @@ class RecorderViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @IBAction func touchDown(_ sender: UIButton) {
+        
+        self.selectedIndexPath = nil
+        self.collectionView.reloadData()
+        
         MYVoiceRecorder.shareInstance.startRecording()
         self.recorderHUD.show()
     }
@@ -64,6 +70,7 @@ class RecorderViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @IBAction func touchUpInside(_ sender: UIButton) {
         self.recorderHUD.hide()
+        
         MYVoiceRecorder.shareInstance.finishedRecording()
     }
     
@@ -95,34 +102,31 @@ class RecorderViewController: UIViewController, UICollectionViewDelegate, UIColl
         if indexPath.row < self.arrayOfVoiceURL.count {
             cell.item = self.arrayOfVoiceURL[indexPath.row]
         }
+        if indexPath == self.selectedIndexPath {
+            cell.startAnimation()
+        }else {
+            cell.stopAnimation()
+        }
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        self.selectedIndexPath = indexPath
+        
         MYVoiceRecorder.shareInstance.stopPlaying()
         
-        let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
-        cell.startAnimation()
+        collectionView.reloadData()
         
         let url = self.arrayOfVoiceURL[indexPath.row].url
         let _ = MYVoiceRecorder.shareInstance.playWithUrl(url!)
-        
-        for item in collectionView.indexPathsForVisibleItems {
-            if item != indexPath {
-                let cell = collectionView.cellForItem(at: item) as! CollectionViewCell
-                cell.stopAnimation()
-            }
-        }
     }
     
     func didFinishPlaying(my_voiceRecorder: MYVoiceRecorder) {
-        let indexPath = self.collectionView.indexPathsForSelectedItems?.first
-        let cell = self.collectionView.cellForItem(at: indexPath!) as! CollectionViewCell
-        cell.stopAnimation()
+        self.selectedIndexPath = nil
+        self.collectionView.reloadData()
     }
-
 }
 
 extension RecorderViewController {
